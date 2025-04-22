@@ -9,5 +9,6 @@ DOMAIN-SUFFIX,trakt.tv
 DOMAIN-SUFFIX,tvmaze.com
 DOMAIN-SUFFIX,omdbapi.com
 DOMAIN-SUFFIX,hongxingyunmovie.vip
-DOMAIN-SUFFIX,emotn.com
-DOMAIN-SUFFIX,emotn.shop
+DOMAIN,emotn.com
+DOMAIN,emotn.shop
+DOMAIN-KEYWORD,keeflys
