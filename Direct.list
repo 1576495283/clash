@@ -1,2 +1,9 @@
-DOMAIN-SUFFIX,nas.ygtnas092052.fun
+DOMAIN-SUFFIX,ygtnas092052.fun
 DOMAIN-SUFFIX,ikuai.ygtnas092052.fun
+DOMAIN-SUFFIX,nas.ygtnas092052.fun
+DOMAIN-SUFFIX,lan
+DOMAIN-SUFFIX,local
+DOMAIN,localhost
+IP-CIDR,fd00::/8
+IP-CIDR,fe80::/10
+IP-CIDR,240e::/16
