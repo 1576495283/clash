@@ -5,6 +5,9 @@ DOMAIN-SUFFIX,highygt.win
 DOMAIN-SUFFIX,lan
 DOMAIN-SUFFIX,local
 DOMAIN,localhost
+DOMAIN-SUFFIX,speedcheck.org
+DOMAIN-SUFFIX,speedtest.net
+DOMAIN-SUFFIX,speedtest.cn
 IP-CIDR,fd00::/8
 IP-CIDR,fe80::/10
 IP-CIDR,240e::/16
