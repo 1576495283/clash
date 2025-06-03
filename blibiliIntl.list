@@ -1,6 +1,23 @@
 # NAME: BiliBiliIntl
 # AUTHOR: 1576495283
 # UPDATED: 2025-06-03 11:17:00
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,akamaized.net
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,biliintl.com
+DOMAIN-SUFFIX,biliintl.com,BilibiliHKTWMO
+DOMAIN-SUFFIX,global.bilibili.com,BilibiliHKTWMO
+DOMAIN-SUFFIX,api.bilibili.com,BilibiliHKTWMO
+DOMAIN-SUFFIX,api.global.bilibili.com,BilibiliHKTWMO
+DOMAIN-SUFFIX,bangumi.bilibili.com,BilibiliHKTWMO
+DOMAIN-SUFFIX,api.biliapi.net,BilibiliHKTWMO
+DOMAIN-SUFFIX,biliapi.net,BilibiliHKTWMO
+DOMAIN-KEYWORD,upos,BilibiliHKTWMO
+DOMAIN-SUFFIX,hdslb.com,BilibiliHKTWMO
+DOMAIN-SUFFIX,akamaized.net,BilibiliHKTWMO
+DOMAIN-SUFFIX,intl.biliapi.net,BilibiliHKTWMO
+DOMAIN-SUFFIX,intl.biliapi.com,BilibiliHKTWMO
 DOMAIN-SUFFIX,bilibili.hk
 DOMAIN-SUFFIX,bilibili.tw
 DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
