@@ -712,7 +712,14 @@ rule-providers:
     behavior: classical
     interval: 86400
     format: text
-    type: http            
+    type: http
+  CN:
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/CN.list
+    path: ./ruleset/CN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http    
   ChinaMedia:
     url: https://ghfast.top/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
     path: ./ruleset/ChinaMedia.list
@@ -794,6 +801,7 @@ rules:
   - "RULE-SET,Emotnstore,🎥 Emby"
   - "RULE-SET,Check,⏱️ 检测"
   - "RULE-SET,ProxyGFWlist,🚀 节点选择"
+  - "RULE-SET,CN,🎯 全球直连"
   - "RULE-SET,ChinaDomain,🎯 全球直连"
   - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
   - "RULE-SET,Download,🎯 全球直连"
