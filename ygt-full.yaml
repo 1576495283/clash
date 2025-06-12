@@ -693,7 +693,7 @@ rule-providers:
     format: text
     type: http
   Emby:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.listt
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.list
     path: ./ruleset/Emby.list
     behavior: classical
     interval: 86400
