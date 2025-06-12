@@ -807,6 +807,6 @@ rules:
   - "RULE-SET,Download,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连,no-resolve"
   - "GEOIP,LAN,🎯 全球直连,no-resolve"
-  - "GEOSITE,private,🎯 全球直连,no-resolve"
+  - "GEOSITE,private,🎯 全球直连"
   - "GEOSITE,geolocation-!cn,📹 油管视频"
   - "MATCH,🐟 漏网之鱼"
