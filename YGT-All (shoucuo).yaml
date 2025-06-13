@@ -16,7 +16,7 @@ proxy-providers:
 #       filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
 #     proxy: 直连
 
-  Airport2:
+  红杏云:
     url: https://hongxing.one/hxvip?token=f79183fb9f18afa2f7e4ed0222e85536
     type: http
     interval: 86400
@@ -31,7 +31,7 @@ proxy-providers:
       filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
     proxy: 直连
 
-  Airport3:
+  牛逼:
     url: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=e2079d4cc7a9ea7a325642b016cd057b
     type: http
     interval: 86400
@@ -46,7 +46,7 @@ proxy-providers:
       filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
     proxy: 直连
 
-  Airport4:
+  三分:
     url: https://38.207.152.58:2052/api/v1/client/subscribe?token=bf81396ef1ddf01e0e6cdbc5cc69dd6c
     type: http
     interval: 86400
@@ -61,7 +61,7 @@ proxy-providers:
       filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
     proxy: 直连
 
-  Airport5:
+  CF:
     url: https://odd-poetry-38c8.yanggaoteng.workers.dev/898989?sub
     type: http
     interval: 86400
