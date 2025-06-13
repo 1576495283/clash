@@ -147,7 +147,7 @@ dns:
   fake-ip-filter-mode: blacklist
   nameserver:
     - 223.5.5.5
-    - 119.29.29.29
+    - 61.134.1.4
   fake-ip-filter:
     - "rule-set:private_domain,cn_domain"
     - "+.msftconnecttest.com"
