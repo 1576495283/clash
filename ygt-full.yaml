@@ -585,6 +585,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Ai:
+    url: https://raw.githubusercontent.com/1576495283/clash/refs/heads/list/AI.list
+    path: ./ruleset/OpenAi.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http  
   NetEaseMusic:
     url: https://ghfast.top/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list
     path: ./ruleset/NetEaseMusic.list
@@ -780,6 +787,7 @@ rules:
   - "RULE-SET,Apple,🍎 苹果服务"
   - "RULE-SET,Telegram,📲 电报消息"
   - "RULE-SET,OpenAi,💬 OpenAi"
+  - "RULE-SET,Ai,💬 OpenAi"
   - "RULE-SET,NetEaseMusic,🎶 网易音乐"
   - "RULE-SET,Epic,🎮 游戏平台"
   - "RULE-SET,Origin,🎮 游戏平台"
