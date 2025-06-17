@@ -8,6 +8,7 @@ DOMAIN,localhost
 DOMAIN-SUFFIX,speedcheck.org
 DOMAIN-SUFFIX,speedtest.net
 DOMAIN-SUFFIX,speedtest.cn
+DOMAIN-SUFFIX,starrydata.com
 IP-CIDR,fd00::/8
 IP-CIDR,fe80::/10
 IP-CIDR,240e::/16
