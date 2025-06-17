@@ -3,3 +3,12 @@ DOMAIN,ios.chat.openai
 DOMAIN-KEYWORD,datadoghq
 DOMAIN-KEYWORD,revenuecat
 DOMAIN-KEYWORD,sentry
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,docs.x.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,docs.perplexity.ai
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,copilot.microsoft.com     
+DOMAIN-SUFFIX,copilot.github.com
