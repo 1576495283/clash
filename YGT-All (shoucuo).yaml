@@ -110,7 +110,7 @@ external-ui: ui
 external-ui-name: zashboard
 external-ui-url: "https://github.moeyy.xyz/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
-嗅探
+# 嗅探
 sniffer:
   enable: true
   sniff:
