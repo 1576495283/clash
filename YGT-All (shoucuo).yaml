@@ -306,8 +306,6 @@ dns:
  #    - 223.5.5.5
  #  proxy-server-nameserver:
  #    - https://223.5.5.5/dns-query
-  # namesever尽量用运营商提供的DNS
-ipv6: false
 
 # 入站  
 tun:
