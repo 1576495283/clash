@@ -721,9 +721,9 @@ rule-providers:
     format: text
     type: http
   CN:
-    url: https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
-    path: ./ruleset/CN.mrs
-    behavior: domain
+    url: https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geosite/cn.list
+    path: ./ruleset/CN.list
+    behavior: classical
     interval: 86400
     format: mrs
     type: http    
