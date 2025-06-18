@@ -60,20 +60,20 @@ proxy-providers:
 #       filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
 #     proxy: 直连
 
-#   CF:
-#     url: https://odd-poetry-38c8.yanggaoteng.workers.dev/898989?sub
-#     type: http
-#     interval: 86400
-#     health-check:
-#       enable: true
-#       url: https://www.gstatic.com/generate_204
-#       interval: 300
-#       udp: true
-#       skip-cert-verify: true
-#       emoji: true
-#       sort: true
-#       filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
-#     proxy: 🚀 默认代理
+  CF:
+    url: https://odd-poetry-38c8.yanggaoteng.workers.dev/898989?sub
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      udp: true
+      skip-cert-verify: true
+      emoji: true
+      sort: true
+      filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
+    proxy: 🚀 默认代理
 
 # 节点信息
 proxies:
