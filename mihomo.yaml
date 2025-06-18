@@ -1,9 +1,6 @@
-proxies:
-  - {name: 直连, type: direct}
-  - {name: 拒绝, type: reject}
-pr: &pr type: select, proxies: [🚀 默认代理, ♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, 直连]
+pr: &pr type: select, proxies: [🚀 默认代理, ♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, DIRECT]
 proxy-groups:
-  - name: 🚀 默认代理, type: select, proxies: [♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, 直连]
+  - name: 🚀 默认代理, type: select, proxies: [♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, DIRECT]
   - name: 📹 YouTube, <<: *pr
   - name: 🍀 Google, <<: *pr
   - name: 🤖 ChatGPT, <<: *pr
@@ -17,9 +14,9 @@ proxy-groups:
   - name: 💶 PayPal, <<: *pr
   - name: 🎵 Spotify, <<: *pr
   - name: 🎥 Emby, <<: *pr
-  - name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]
-  - name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]
-  - name: 🛑 广告拦截, type: select, proxies: [拒绝]
+  - name: 🍎 Apple, type: select, proxies: [DIRECT, 🚀 默认代理]
+  - name: 🎯 DIRECT, type: select, proxies: [DIRECT, 🚀 默认代理]
+  - name: 🛑 广告拦截, type: select, proxies: [REJECT]
   - name: 🐟 漏网之鱼, <<: *pr
   - name: 🇭🇰 香港手动, type: select, include-all: true, filter: '(?i)(港|HK|Hong\s?Kong)'
   - name: 🇯🇵 日本手动, type: select, include-all: true, filter: '(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)'
@@ -39,19 +36,19 @@ proxy-groups:
   - name: 🌏 CF自动, type: select, include-all: true, filter: '(?i)CF|CF随机'
   - name: 🇮🇳 印度自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(IN|India|Mumbai|Delhi|^IN(?!DONESIA)|(?<!印)印度(?!尼)|孟买|德里|印度-西部|其他-印度)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'
   - name: 🌏 其他自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(波|波兰|柬|柬埔寨|尼|尼泊尔|也|也门|克|克罗地亚|比|比利时|尔|阿尔及尔|立|立陶宛|冰|冰岛|秘|秘鲁|耳|阿尔巴尼亚|利|利比亚|埃|埃及|希|希腊|孟|孟加拉|芬|芬兰|愛|爱尔兰|澳|澳大利亚|英|英国|德|德国|南|南非|意|意大利|法|法国|拿|加拿大|墨|墨西哥|印|印度尼西亚|越|越南|俄|俄罗斯|瑞|瑞士|智|智利|荷|荷兰|巴|巴西|沙|沙特|班|班加罗尔|泰|泰国|烏|乌克兰|以|以色列|Australia|Konghwaguk)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'
-  - name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"
+  - name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(DIRECT)).)*$"
   - name: 🌐 全部节点, type: select, include-all: true
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - "DOMAIN-SUFFIX,highygt.win,直连"
-  - "DOMAIN-SUFFIX,ygtnas092052.fun,直连"
-  - "RULE-SET,private_domain,直连"
-  - "RULE-SET,LocalAreaNetwork,直连"
-  - "RULE-SET,UnBan,拒绝"
-  - "RULE-SET,BanAD,拒绝"
-  - "RULE-SET,BanProgramAD,拒绝"
+  - "DOMAIN-SUFFIX,highygt.win,DIRECT"
+  - "DOMAIN-SUFFIX,ygtnas092052.fun,DIRECT"
+  - "RULE-SET,private_domain,DIRECT"
+  - "RULE-SET,LocalAreaNetwork,DIRECT"
+  - "RULE-SET,UnBan,REJECT"
+  - "RULE-SET,BanAD,REJECT"
+  - "RULE-SET,BanProgramAD,REJECT"
   - "RULE-SET,apple_domain,🍎 Apple"
   - "RULE-SET,proxylite,🚀 默认代理"
   - "RULE-SET,ai,🤖 ChatGPT"
@@ -71,11 +68,11 @@ rules:
   - "RULE-SET,Emotnstore,🎥 Emby"
   - "RULE-SET,gfw_domain,🚀 默认代理"
   - "RULE-SET,geolocation-!cn,🚀 默认代理"
-  - "RULE-SET,cn_domain,🎯 直连"
+  - "RULE-SET,cn_domain,🎯 DIRECT"
   - "RULE-SET,google_ip,🍀 Google,no-resolve"
   - "RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve"
   - "RULE-SET,telegram_ip,📲 Telegram,no-resolve"
-  - "RULE-SET,cn_ip,🎯 直连"
+  - "RULE-SET,cn_ip,🎯 DIRECT"
   - "MATCH,🐟 漏网之鱼"
 
 # 规则集
