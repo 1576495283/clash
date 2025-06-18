@@ -140,14 +140,14 @@ external-ui-url: "https://github.moeyy.xyz/https://github.com/Zephyruso/zashboar
 dns:
   enable: true
   listen: 0.0.0.0:7874
-  ipv6: true
+  ipv6: false
 #   respect-rules: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.20.0.1/16
   fake-ip-filter-mode: blacklist
   nameserver:
     - 223.5.5.5
-    - 61.134.1.4
+    - system
   fake-ip-filter:
     - "rule-set:private_domain,cn_domain"
     - "+.msftconnecttest.com"
@@ -307,7 +307,7 @@ dns:
  #  proxy-server-nameserver:
  #    - https://223.5.5.5/dns-query
   # namesever尽量用运营商提供的DNS
-ipv6: true
+ipv6: false
 
 # 入站  
 tun:
