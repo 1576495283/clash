@@ -2,8 +2,7 @@
 # 机场订阅
 proxy-providers:
   ygt:
-   url: http://127.0.0.1:25500/sub?target=clash&url=https%3A%2F%2Fhongxing.one%2Fhxvip%3Ftoken%3Df79183fb9f18afa2f7e4ed0222e85536%7Chttps%3A%2F%2Fzhuzhuzhu.whtjdasha.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3De2079d4cc7a9ea7a325642b016cd057b%7Chttps%3A%2F%2F38.207.152.58%3A2052%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dbf81396ef1ddf01e0e6cdbc5cc69dd6c%7Chttps%3A%2F%2Fodd-poetry-38c8.yanggaoteng.workers.dev%2F898989%3Fsub&insert=true&exclude=(%3Fi)%5E.*(%E5%AE%98%E7%BD%91%7C%E5%89%A9%E4%BD%99%7C%E8%B7%9D%E7%A6%BB%7C%E5%A5%97%E9%A4%90%7C%E5%88%B7%E6%96%B0%7C%E5%AF%BC%E8%88%AA%E9%A1%B5%7C%E5%BB%BA%E8%AE%AE%7C%E8%BF%87%E6%BB%A4%7CTraffic%7CExpire%7CCFnat%7C%E5%AE%A2%E6%88%B7%E7%AB%AF%7C0%5C.1x%7Cipv6%7C%E6%B5%8B%E8%AF%95%7Cx2%7Cx3%7Cx5).*&filename=ygt&append_type=true&emoji=true&list=true&tfo=false&scv=true&fdn=true&expand=true&sort=true&udp=true&surge.doh=true&clash.doh=true&new_name=true
-     type: http
+   url: http://127.0.0.1:25500/sub?target=clash&url=https%3A%2F%2Fhongxing.one%2Fhxvip%3Ftoken%3Df79183fb9f18afa2f7e4ed0222e85536%7Chttps%3A%2F%2Fzhuzhuzhu.whtjdasha.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3De2079d4cc7a9ea7a325642b016cd057b%7Chttps%3A%2F%2F38.207.152.58%3A2052%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dbf81396ef1ddf01e0e6cdbc5cc69dd6c&insert=true&exclude=(%3Fi)%5E.*(%E5%AE%98%E7%BD%91%7C%E5%89%A9%E4%BD%99%7C%E8%B7%9D%E7%A6%BB%7C%E5%A5%97%E9%A4%90%7C%E5%88%B7%E6%96%B0%7C%E5%AF%BC%E8%88%AA%E9%A1%B5%7C%E5%BB%BA%E8%AE%AE%7C%E8%BF%87%E6%BB%A4%7CTraffic%7CExpire%7C%E5%AE%A2%E6%88%B7%E7%AB%AF%7C0%5C.1x%7Cipv6%7C%E6%B5%8B%E8%AF%95%7Cx2%7Cx3%7Cx5).*&filename=ygt&append_type=true&emoji=true&list=true&tfo=false&scv=true&fdn=true&expand=true&sort=true&udp=true&surge.doh=true&clash.doh=true&new_name=true
     interval: 86400
     health-check:
       enable: true
@@ -13,7 +12,7 @@ proxy-providers:
       skip-cert-verify: true
       emoji: true
       sort: true
-    proxy: 🚀 默认代理
+    proxy: 直连
 
 #   红杏云:
 #     url: https://hongxing.one/hxvip?token=f79183fb9f18afa2f7e4ed0222e85536
@@ -72,7 +71,6 @@ proxy-providers:
       skip-cert-verify: true
       emoji: true
       sort: true
-      filter: "^(?!.*(官网|剩余|距离|套餐|刷新|导航页|建议|过滤|Traffic|Expire|0.1x|x2|x3|x5|ipv6|IPV6|测试)).*$"
     proxy: 🚀 默认代理
 
 # 节点信息
