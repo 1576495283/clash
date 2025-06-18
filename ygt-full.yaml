@@ -725,7 +725,7 @@ rule-providers:
     path: ./ruleset/CN.list
     behavior: classical
     interval: 86400
-    format: mrs
+    format: text
     type: http    
   ChinaMedia:
     url: https://ghfast.top/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
