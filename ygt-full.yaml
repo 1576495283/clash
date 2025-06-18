@@ -723,7 +723,7 @@ rule-providers:
   CN:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
     path: ./ruleset/CN.mrs
-    behavior: classical
+    behavior: domain
     interval: 86400
     format: mrs
     type: http    
