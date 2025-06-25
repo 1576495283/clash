@@ -120,6 +120,7 @@ proxy-groups:
     type: select
     proxies:
       - 🇸🇬 狮城自动
+      - 🇸🇬 狮城手动
       - 🇭🇰 香港自动
       - 🇺🇲 美国自动
       - 🌏 CF自动
@@ -239,6 +240,7 @@ proxy-groups:
       - 🇭🇰 香港自动
       - 🇨🇳 台湾自动
       - 🇸🇬 狮城自动
+      - 🇸🇬 狮城手动
       - 🇯🇵 日本自动
       - 🇺🇲 美国自动
       - 🇰🇷 韩国自动
@@ -460,6 +462,10 @@ proxy-groups:
     type: url-test
     interval: 300
     tolerance: 50
+  - name: 🇸🇬 狮城手动
+    include-all: true
+    filter: ((?i)(新加坡|坡|狮城|SG|Singapore)(?!.*(?:X[235]|[235]X|x[235]|[235]x))(?!(?:标准|高级)))
+    type: select 
   - name: 🇰🇷 韩国自动
     include-all: true
     filter: ((?i)(KR|Korea|KOR|首尔|韩|韓)(?!.*(?:X[235]|[235]X|x[235]|[235]x))(?!(?:标准|高级)))
