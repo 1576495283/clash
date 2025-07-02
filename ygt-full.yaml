@@ -8,7 +8,229 @@
 # 增强中国IP段：支持
 # 增强国外GFW：支持
 # 增加Tiktok规则默认美国节点
-#更新日期：2025-06-06
+#更新日期：2025-07-02
+# 嗅探
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - "+.v2ex.com"
+    - "+.netflix.com"
+    - "+.nflxvideo.net"
+    - "+.amazonaws.com"
+    - "+.media.dssott.com"
+  skip-domain:
+    - "+.baidu.com"
+    - "+.apple.com"
+    - Mijia Cloud
+    - dlg.io.mi.com
+    - "+.oray.com"
+    - "+.sunlogin.net"
+    - "+.push.apple.com"
+    - "+.highygt.win"
+    - "+.highygt.us.kg"
+    - "+.ygtnas092052.fun"
+    - "+.keeflys.com"
+    - "+.hongxingyunmovievip.com"
+
+# DNS模块
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: false
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.20.0.1/16
+  fake-ip-filter-mode: blacklist
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query  
+  fake-ip-filter:
+    - "rule-set:ChinaMedia,CN,LocalAreaNetwork,ChinaMax,Direct,Direct1,ChinaDomain"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "time.*.com"
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "printer-DocuCentre-V C2263"
+    - "192.168.*"
+    - "10.*"
+    - "172.16.*"
+    - "*.home.arpa"
+    - "*.direct"
+    - cable.auth.com
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - resolver1.opendns.com
+    - global.turn.twilio.com
+    - global.stun.twilio.com
+    - app.yinxiang.com
+    - injections.adguard.org
+    - localhost.*.weixin.qq.com
+    - "*.blzstatic.cn"
+    - "*.cmpassport.com"
+    - id6.me
+    - open.e.189.cn
+    - opencloud.wostore.cn
+    - id.mail.wo.cn
+    - mdn.open.wo.cn
+    - hmrz.wo.cn
+    - nishub1.10010.com
+    - enrichgw.10010.com
+    - "*.wosms.cn"
+    - "*.jegotrip.com.cn"
+    - "*.icitymobile.mobi"
+    - "*.pingan.com.cn"
+    - "*.cmbchina.com"
+    - "*.10099.com.cn"
+    - "*.microdone.cn"
+    - PDC._msDCS.*.*
+    - DC._msDCS.*.*
+    - GC._msDCS.*.*
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - "+.qq.com"
+    - "+.tencent.com"
+    - "+.srv.nintendo.net"
+    - "*.n.n.srv.nintendo.net"
+    - "+.cdn.nintendo.net"
+    - "+.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - "+.battle.net"
+    - "+.battlenet.com.cn"
+    - "+.wotgame.cn"
+    - "+.wggames.cn"
+    - "+.wowsgame.cn"
+    - "+.wargaming.net"
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - na.b.g-tun.com
+    - "+.nflxvideo.net"
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - "+.media.dssott.com"
+    - shark007.net
+    - Mijia Cloud
+    - "+.cmbchina.com"
+    - "+.cmbimg.com"
+    - local.adguard.org
+    - "+.sandai.net"
+    - "+.n0808.com"
+    - "+.uu.163.com"
+    - ps.res.netease.com
+    - Wifi Calling
+    - "+.pub.3gppnetwork.org"
+    - GEOSITE(Meta core)
+    - geosite:category-games
+    - geosite:apple-cn
+    - "+.highygt.win"
+    - "+.ygtnas092052.fun"
+    - "+.services.googleapis.cn"
+    - "+.googleapis.cn"
+    - "+.xn--ngstr-lra8j.com"
+    - geosite:cn  
+  default-nameserver:
+    - 114.114.114.114
+    - 221.11.1.67
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+
+# 入站  
+tun:
+  enable: true
+  stack: gvisor
+  device: utun
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
+  inet4-exclude:
+    - 192.168.4.0/24
 
 
 proxy-groups:
@@ -120,8 +342,8 @@ proxy-groups:
     type: select
     proxies:
       - 🇸🇬 狮城自动
-      - 🇸🇬 狮城手动
       - 🇭🇰 香港自动
+      - 🇸🇬 狮城手动
       - 🇺🇲 美国自动
       - 🌏 CF自动
       - 🌏 CF手动
@@ -129,6 +351,7 @@ proxy-groups:
     type: select
     proxies:
       - 🇨🇳 台湾自动
+      - 🌏 CF手动
       - 🚀 节点选择
       - 🚀 手动切换
       - DIRECT
@@ -144,8 +367,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🇨🇳 台湾自动
-      - 🇭🇰 香港自动
-      - 🌏 CF手动
+      - 🇭🇰 香港自动    
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -487,7 +709,7 @@ proxy-groups:
   - name: 🌏 CF手动
     include-all: true
     filter: (?i)CF|CF随机|CFnat|CF优选
-    type: select  
+    type: select    
   - name: 🇮🇳 印度自动
     include-all: true
     filter: ((?i)(IN|India|Mumbai|Delhi|^IN(?!DONESIA)|(?<!印)印度(?!尼)|孟买|德里|印度-西部|其他-印度)(?!.*(?:X[235]|[235]X|x[235]|[235]x))(?!(?:标准|高级)))
@@ -759,7 +981,7 @@ rule-providers:
     type: http
   CN:
     url: https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geosite/cn.list
-    path: ./ruleset/CN.list
+    path: ./ruleset/CN.mrs
     behavior: classical
     interval: 86400
     format: text
@@ -808,6 +1030,9 @@ rule-providers:
     type: http
 
 rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
