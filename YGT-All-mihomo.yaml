@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   ygt:
-    url: http://127.0.0.1:25500/sub?target=clash&url=https%3A%2F%2Fhongxing.one%2Fhxvip%3Ftoken%3Df79183fb9f18afa2f7e4ed0222e85536%7Chttps%3A%2F%2Fzhuzhuzhu.whtjdasha.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3De2079d4cc7a9ea7a325642b016cd057b%7Chttps%3A%2F%2F38.207.152.58%3A2052%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dbf81396ef1ddf01e0e6cdbc5cc69dd6c&insert=true&exclude=(%3Fi)%5E.*(%E5%AE%98%E7%BD%91%7C%E5%89%A9%E4%BD%99%7C%E8%B7%9D%E7%A6%BB%7C%E5%A5%97%E9%A4%90%7C%E5%88%B7%E6%96%B0%7C%E5%AF%BC%E8%88%AA%E9%A1%B5%7C%E5%BB%BA%E8%AE%AE%7C%E8%BF%87%E6%BB%A4%7CTraffic%7CExpire%7C%E5%AE%A2%E6%88%B7%E7%AB%AF%7C0%5C.1x%7Cipv6%7C%E6%B5%8B%E8%AF%95%7Cx2%7Cx3%7Cx5).*&filename=ygt&append_type=true&emoji=true&list=true&tfo=false&scv=true&fdn=true&expand=true&sort=true&udp=true&surge.doh=true&clash.doh=true&new_name=true
+    url: https://api.sublink.dev/sub?target=surge&ver=4&url=https%3A%2F%2Fhongxingyun10.vip%2Fhxyunvip%3Ftoken%3Df79183fb9f18afa2f7e4ed0222e85536%7Chttp%3A%2F%2F8.138.135.231%3A8090%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3De2079d4cc7a9ea7a325642b016cd057b%7Chttp%3A%2F%2F103.150.11.56%3A12321%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dbf81396ef1ddf01e0e6cdbc5cc69dd6c&insert=false&config=https%3A%2F%2Fsubweb.s3.fr-par.scw.cloud%2FRemoteConfig%2Fspecial%2Fnetease.ini&exclude=(%3Fi)%5E.*(%E5%AE%98%E7%BD%91%7C%E5%89%A9%E4%BD%99%7C%E8%B7%9D%E7%A6%BB%7C%E5%A5%97%E9%A4%90%7C%E5%88%B7%E6%96%B0%7C%E5%AF%BC%E8%88%AA%E9%A1%B5%7C%E5%BB%BA%E8%AE%AE%7C%E8%BF%87%E6%BB%A4%7CTraffic%7CExpire%7CCFnat%7C%E5%AE%A2%E6%88%B7%E7%AB%AF%7C0%5C.1x%7Cipv6%7C%E6%B5%8B%E8%AF%95%7Cx2%7Cx3%7Cx5).*&emoji=true&list=false&tfo=false&scv=false&fdn=false&expand=true&sort=false
     type: http
     interval: 86400
     health-check:
@@ -30,7 +30,7 @@ proxy-providers:
       #proxy: 直连
     
   CF:
-    url: https://ssr.highygt.us.kg/ygt?clash
+    url: https://ssr.highygt.us.kg/ygt?sub?proxyip=ProxyIP.Vultr.CMLiussss.net
     type: http
     interval: 86400
     health-check:
