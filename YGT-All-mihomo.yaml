@@ -30,7 +30,7 @@ proxy-providers:
       #proxy: 直连
     
   CF:
-    url: https://ssr.highygt.us.kg/ygt?clash
+    url: https://ssr.highygt.us.kg/ygt?clash?proxyip=ProxyIP.Vultr.CMLiussss.net
     type: http
     interval: 86400
     health-check:
@@ -94,8 +94,6 @@ sniffer:
     - "+.oray.com"
     - "+.sunlogin.net"
     - "+.push.apple.com"
-    - "+.highygt.win"
-    - "+.highygt.us.kg"
     - "+.ygtnas092052.fun"
     - "+.keeflys.com"
     - "+.hongxingyunmovievip.com"
@@ -334,7 +332,7 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN-SUFFIX,highygt.win,直连
+  - DOMAIN-SUFFIX,highygt.win,🚀 默认代理
   - DOMAIN-SUFFIX,ygtnas092052.fun,直连
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
