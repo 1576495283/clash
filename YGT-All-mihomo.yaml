@@ -96,6 +96,8 @@ sniffer:
     - "+.push.apple.com"
     - "+.ygtnas092052.fun"
     - "+.keeflys.com"
+    - "+.highygt.win"
+    - "+.highygt.us.kg"
     - "+.hongxingyunmovievip.com"
 
 # 入站  
@@ -273,8 +275,8 @@ dns:
     - "+.xn--ngstr-lra8j.com"
     - geosite:cn  
   default-nameserver:
-    - 114.114.114.114
-    - 218.30.19.40
+    - 119.29.29.29
+    - 8.8.8.8
   direct-nameserver:
     - 114.114.114.114
     - 218.30.19.40
@@ -284,8 +286,8 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback:
-    - tls://8.8.4.4
-    - tls://1.1.1.1
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 pr: &pr {type: select, proxies: [🚀 默认代理, ♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, 直连]}
@@ -332,7 +334,7 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN-SUFFIX,highygt.win,🚀 默认代理
+#  - DOMAIN-SUFFIX,highygt.win,🚀 默认代理
   - DOMAIN-SUFFIX,ygtnas092052.fun,直连
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
