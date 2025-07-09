@@ -16,18 +16,18 @@ proxy-providers:
       proxy: 直连
 
   #CF1:
-    #url: https://ssr.highygt.us.kg/afb333f8-3e64-4e7f-b57c-99500e538be3?sub=VLESS.cmliussss.net
-    #type: http
-    #interval: 86400
-    #health-check:
-      #enable: true
-      #url: https://www.gstatic.com/generate_204
-      #interval: 300
-      #udp: true
-      #skip-cert-verify: true
-      #emoji: true
-      #sort: true
-      #proxy: 直连
+      #url: https://hongxing.one/hxvip?token=f79183fb9f18afa2f7e4ed0222e85536
+     #type: http
+     #interval: 86400
+     #health-check:
+       #enable: true
+       #url: https://www.gstatic.com/generate_204
+       #interval: 300
+       #udp: true
+       #skip-cert-verify: true
+       #emoji: true
+       #sort: true
+       #proxy: 直连
     
   CF:
     url: https://ssr.highygt.us.kg/ygt?clash?proxyip=ProxyIP.Vultr.CMLiussss.net
