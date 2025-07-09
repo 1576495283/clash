@@ -336,7 +336,6 @@ rules:
   - DOMAIN-SUFFIX,ygtnas092052.fun,直连
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
-  - IP-CIDR,155.102.4.0/24,🎥 Emby
   - RULE-SET,private_domain,直连
   - RULE-SET,LocalAreaNetwork,直连
   - RULE-SET,UnBan,拒绝
