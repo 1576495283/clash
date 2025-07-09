@@ -41,7 +41,7 @@ proxy-providers:
       skip-cert-verify: true
       emoji: true
       sort: true
-      proxy: 直连    
+      proxy: 🚀 默认代理    
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
