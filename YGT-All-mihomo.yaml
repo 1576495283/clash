@@ -48,26 +48,26 @@ proxies:
   - {name: 拒绝, type: reject}
   #- {name: CFnat, server: 198.41.221.147, port: 443, type: vless, uuid: 1bfddafe-e5c7-4b72-b839-251fe03f36c9, tls: true, tfo: false, skip-cert-verify: true, servername: odd-poetry-38c8.yanggaoteng.workers.dev, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: odd-poetry-38c8.yanggaoteng.workers.dev}},proxy: 🚀 默认代理}
 # 全局配置 
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7894
-allow-lan: true
-bind-address: "*"
-ipv6: false
-unified-delay: true
-tcp-concurrent: true
-log-level: warning
-find-process-mode: 'off'
+#port: 7890
+#socks-port: 7891
+#redir-port: 7892
+#mixed-port: 7893
+#tproxy-port: 7894
+#allow-lan: true
+#bind-address: "*"
+#ipv6: false
+#unified-delay: true
+#tcp-concurrent: true
+#log-level: warning
+#find-process-mode: 'off'
 # interface-name: en0
-global-client-fingerprint: chrome
-keep-alive-idle: 600
-keep-alive-interval: 15
-disable-keep-alive: false
-profile:
-  store-selected: true
-  store-fake-ip: true
+#global-client-fingerprint: chrome
+#keep-alive-idle: 600
+#keep-alive-interval: 15
+#disable-keep-alive: false
+#profile:
+#  store-selected: true
+#  store-fake-ip: true
 
 # 嗅探
 sniffer:
