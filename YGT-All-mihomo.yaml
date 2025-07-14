@@ -15,19 +15,19 @@ proxy-providers:
       sort: true
       proxy: 直连
 
-  #CF1:
-      #url: https://hongxing.one/hxvip?token=f79183fb9f18afa2f7e4ed0222e85536
-     #type: http
-     #interval: 86400
-     #health-check:
-       #enable: true
-       #url: https://www.gstatic.com/generate_204
-       #interval: 300
-       #udp: true
-       #skip-cert-verify: true
-       #emoji: true
-       #sort: true
-       #proxy: 直连
+  cf:
+    url: https://ssr.highygt.us.kg/ygt?sub?proxyip=ProxyIP.Vultr.CMLiussss.net
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      udp: true
+      skip-cert-verify: true
+      emoji: true
+      sort: true
+      proxy: 🚀 默认代理
       
 # 节点信息
 proxies:
