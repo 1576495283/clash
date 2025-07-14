@@ -76,13 +76,15 @@ sniffer:
   skip-domain:
     - "+.baidu.com"
     - "+.apple.com"
-    - Mijia Cloud
-    - dlg.io.mi.com
+    - "Mijia Cloud"
+    - "dlg.io.mi.com"
     - "+.oray.com"
     - "+.sunlogin.net"
     - "+.push.apple.com"
     - "+.ygtnas092052.fun"
     - "+.highygt.win"
+    - "+.highygt.us.kg"
+    - "highygt.us.kg"
     - "+.keeflys.com"
     - "+.hongxingyunmovievip.com"
 
@@ -255,6 +257,7 @@ dns:
     - geosite:apple-cn
     - "+.highygt.win"
     - "+.highygt.us.kg"
+    - "highygt.us.kg"
     - "+.ygtnas092052.fun"
     - "+.services.googleapis.cn"
     - "+.googleapis.cn"
