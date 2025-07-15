@@ -324,8 +324,8 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN-SUFFIX,highygt.win,直连
-  - DOMAIN-SUFFIX,ygtnas092052.fun,直连
+  - DOMAIN-SUFFIX,highygt.win,直连,no-resolve
+  - DOMAIN-SUFFIX,ygtnas092052.fun,直连,no-resolve
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
   - RULE-SET,private_domain,直连,no-resolve
