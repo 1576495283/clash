@@ -33,13 +33,14 @@ proxy-providers:
 proxies:
   - {name: 直连, type: direct}
   - {name: 拒绝, type: reject}
-  #- {name: CFnat, server: 198.41.221.147, port: 443, type: vless, uuid: 1bfddafe-e5c7-4b72-b839-251fe03f36c9, tls: true, tfo: false, skip-cert-verify: true, servername: odd-poetry-38c8.yanggaoteng.workers.dev, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: odd-poetry-38c8.yanggaoteng.workers.dev}},proxy: 🚀 默认代理}
+  
 # 全局配置 
-#port: 7890
-#socks-port: 7891
-#redir-port: 7892
-#mixed-port: 7893
-#tproxy-port: 7894
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+external-ui: ui
 #allow-lan: true
 #bind-address: "*"
 #ipv6: false
@@ -101,9 +102,9 @@ tun:
 # DNS模块
 dns:
   enable: true
-  listen: 0.0.0.0:7874
+  listen: :7874
   ipv6: false
-  respect-rules: true
+  respect-rules: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
@@ -265,18 +266,17 @@ dns:
     - geosite:cn  
   default-nameserver:
     - 119.29.29.29
-    - 8.8.8.8
-  direct-nameserver:
-    - 114.114.114.114
-    - 218.30.19.40
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
+  #direct-nameserver:
+    #- 114.114.114.114
+    #- 218.30.19.40
+  #proxy-server-nameserver:
+    #- https://doh.pub/dns-query
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  fallback:
-    - https://dns.cloudflare.com/dns-query
-    - https://dns.google/dns-query
+  #fallback:
+    #- https://dns.cloudflare.com/dns-query
+    #- https://dns.google/dns-query
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 pr: &pr {type: select, proxies: [🚀 默认代理, ♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, 直连]}
