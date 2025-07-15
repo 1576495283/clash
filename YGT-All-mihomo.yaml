@@ -104,7 +104,7 @@ dns:
   enable: true
   listen: :7874
   ipv6: false
-  respect-rules: false
+  respect-rules: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
@@ -265,18 +265,19 @@ dns:
     - "+.xn--ngstr-lra8j.com"
     - geosite:cn  
   default-nameserver:
-    - 119.29.29.29
-  #direct-nameserver:
-    #- 114.114.114.114
-    #- 218.30.19.40
-  #proxy-server-nameserver:
-    #- https://doh.pub/dns-query
+    - 114.114.114.114
+    - 223.5.5.5
+  direct-nameserver:
+    - 114.114.114.114
+    - 218.30.19.40
+  proxy-server-nameserver:
+    - https://dns.cloudflare.com/dns-query
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  #fallback:
-    #- https://dns.cloudflare.com/dns-query
-    #- https://dns.google/dns-query
+  fallback:
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 pr: &pr {type: select, proxies: [🚀 默认代理, ♻️ 自动选择,🇭🇰 香港自动, 🇯🇵 日本自动, 🇺🇲 美国自动, 🇨🇳 台湾自动, 🇸🇬 狮城自动, 🇰🇷 韩国自动, 🌏 CF自动, 🇮🇳 印度自动, 🌏 其他自动, 🇭🇰 香港手动, 🇯🇵 日本手动, 🇺🇲 美国手动, 🇨🇳 台湾手动, 🇸🇬 狮城手动, 🇰🇷 韩国手动, 🌏 CF手动, 🇮🇳 印度手动, 🌏 其他手动, 🌐 全部节点, 直连]}
@@ -327,8 +328,8 @@ rules:
   - DOMAIN-SUFFIX,ygtnas092052.fun,直连
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
-  - RULE-SET,private_domain,直连
-  - RULE-SET,LocalAreaNetwork,直连
+  - RULE-SET,private_domain,直连,no-resolve
+  - RULE-SET,LocalAreaNetwork,直连,no-resolve
   - RULE-SET,UnBan,拒绝
   - RULE-SET,BanAD,拒绝
   - RULE-SET,BanProgramAD,拒绝
@@ -354,8 +355,8 @@ rules:
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
-  - RULE-SET,cn_domain,🎯 直连
-  - RULE-SET,cn_ip,🎯 直连
+  - RULE-SET,cn_domain,🎯 直连,no-resolve
+  - RULE-SET,cn_ip,🎯 直连,no-resolve
   - MATCH,🐟 漏网之鱼
 
 # 规则集
