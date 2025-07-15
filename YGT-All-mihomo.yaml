@@ -324,12 +324,12 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN-SUFFIX,highygt.win,直连,no-resolve
-  - DOMAIN-SUFFIX,ygtnas092052.fun,直连,no-resolve
+  - DOMAIN-SUFFIX,highygt.win,直连
+  - DOMAIN-SUFFIX,ygtnas092052.fun,直连
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
-  - RULE-SET,private_domain,直连,no-resolve
-  - RULE-SET,LocalAreaNetwork,直连,no-resolve
+  - RULE-SET,private_domain,直连
+  - RULE-SET,LocalAreaNetwork,直连
   - RULE-SET,UnBan,拒绝
   - RULE-SET,BanAD,拒绝
   - RULE-SET,BanProgramAD,拒绝
@@ -355,7 +355,7 @@ rules:
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
-  - RULE-SET,cn_domain,🎯 直连,no-resolve
+  - RULE-SET,cn_domain,🎯 直连
   - RULE-SET,cn_ip,🎯 直连,no-resolve
   - MATCH,🐟 漏网之鱼
 
