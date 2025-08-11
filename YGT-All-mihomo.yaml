@@ -309,25 +309,31 @@ proxy-groups:
   - {name: 🌏 CF手动, type: select, include-all: true, filter: '(?i)CF|CF随机|CFnat'}
   - {name: 🇮🇳 印度手动, type: select, include-all: true, filter: '(?i)(IN|India|Mumbai|Delhi|^IN(?!DONESIA)|(?<!印)印度(?!尼)|孟买|德里|印度-西部|其他-印度)'}
   - {name: 🌏 其他手动, type: select, include-all: true, filter: '(?i)(波|波兰|柬|柬埔寨|尼|尼泊尔|也|也门|克|克罗地亚|比|比利时|尔|阿尔及尔|立|立陶宛|冰|冰岛|秘|秘鲁|耳|阿尔巴尼亚|利|利比亚|埃|埃及|希|希腊|孟|孟加拉|芬|芬兰|愛|爱尔兰|澳|澳大利亚|英|英国|德|德国|南|南非|意|意大利|法|法国|拿|加拿大|墨|墨西哥|印|印度尼西亚|越|越南|俄|俄罗斯|瑞|瑞士|智|智利|荷|荷兰|巴|巴西|沙|沙特|班|班加罗尔|泰|泰国|烏|乌克兰|以|以色列|Australia|Konghwaguk)'}
-  - {name: 🇭🇰 香港自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(港|HK|Hong\s?Kong)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🇯🇵 日本自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🇺🇲 美国自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🇨🇳 台湾自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(台|新北|彰化|TW|Taiwan)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🇸🇬 狮城自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(新加坡|坡|狮城|SG|Singapore)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🇰🇷 韩国自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(KR|Korea|KOR|首尔|韩|韓)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🌏 CF自动, type: select, include-all: true, filter: '(?i)CF|CF随机'}
-  - {name: 🇮🇳 印度自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(IN|India|Mumbai|Delhi|^IN(?!DONESIA)|(?<!印)印度(?!尼)|孟买|德里|印度-西部|其他-印度)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: 🌏 其他自动, type: url-test, include-all: true, interval: 300, tolerance: 50, filter: '(?i)(波|波兰|柬|柬埔寨|尼|尼泊尔|也|也门|克|克罗地亚|比|比利时|尔|阿尔及尔|立|立陶宛|冰|冰岛|秘|秘鲁|耳|阿尔巴尼亚|利|利比亚|埃|埃及|希|希腊|孟|孟加拉|芬|芬兰|愛|爱尔兰|澳|澳大利亚|英|英国|德|德国|南|南非|意|意大利|法|法国|拿|加拿大|墨|墨西哥|印|印度尼西亚|越|越南|俄|俄罗斯|瑞|瑞士|智|智利|荷|荷兰|巴|巴西|沙|沙特|班|班加罗尔|泰|泰国|烏|乌克兰|以|以色列|Australia|Konghwaguk)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🇭🇰 香港自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(港|HK|Hong\s?Kong)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🇯🇵 日本自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🇺🇲 美国自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🇨🇳 台湾自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(台|新北|彰化|TW|Taiwan)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🇸🇬 狮城自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(新加坡|坡|狮城|SG|Singapore)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🇰🇷 韩国自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(KR|Korea|KOR|首尔|韩|韓)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🌏 CF自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)CF|CF随机'}
+  - {name: 🇮🇳 印度自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(IN|India|Mumbai|Delhi|^IN(?!DONESIA)|(?<!印)印度(?!尼)|孟买|德里|印度-西部|其他-印度)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: 🌏 其他自动, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: '(?i)(波|波兰|柬|柬埔寨|尼|尼泊尔|也|也门|克|克罗地亚|比|比利时|尔|阿尔及尔|立|立陶宛|冰|冰岛|秘|秘鲁|耳|阿尔巴尼亚|利|利比亚|埃|埃及|希|希腊|孟|孟加拉|芬|芬兰|愛|爱尔兰|澳|澳大利亚|英|英国|德|德国|南|南非|意|意大利|法|法国|拿|加拿大|墨|墨西哥|印|印度尼西亚|越|越南|俄|俄罗斯|瑞|瑞士|智|智利|荷|荷兰|巴|巴西|沙|沙特|班|班加罗尔|泰|泰国|烏|乌克兰|以|以色列|Australia|Konghwaguk)(?!(.*(?:X[235]|[235]X|x[235]|[235]x|0\.1x|x0\.1|标准|高级)))'}
+  - {name: ♻️ 自动选择, type: smart, include-all: true, uselightgbm: true, collectdata: true, interval: 300, filter: "^((?!(直连)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN-SUFFIX,highygt.win,直连
+#  - DOMAIN-SUFFIX,highygt.win,🚀 默认代理
   - DOMAIN-SUFFIX,ygtnas092052.fun,直连
+  - DOMAIN-KEYWORD,newtv,直连
+  - DOMAIN-KEYWORD,qq,直连
+  - IP-CIDR,172.28.0.0/16,直连
+  - IP-CIDR,172.28.0.0/24,直连
+  - IP-CIDR,172.28.107.180/32,直连
   - DOMAIN-SUFFIX,keeflys.com,🎥 Emby
   - DOMAIN-SUFFIX,dangsfly.com,🎥 Emby
+  - IP-CIDR,155.102.4.0/24,🎥 Emby
   - RULE-SET,private_domain,直连
   - RULE-SET,LocalAreaNetwork,直连
   - RULE-SET,UnBan,拒绝
@@ -356,7 +362,7 @@ rules:
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,🎯 直连
-  - RULE-SET,cn_ip,🎯 直连,no-resolve
+  - RULE-SET,cn_ip,🎯 直连
   - MATCH,🐟 漏网之鱼
 
 # 规则集
