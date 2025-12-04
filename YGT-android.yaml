@@ -16,7 +16,7 @@ proxy-providers:
       proxy: 直连
     filter: '^(?!.*(标准|高级|Traffic|Expire)).*$'
   cf:
-    url: https://ssr.highygt.us.kg/ygt?sub?proxyip=tw.ttzxw.cf:443
+    url: https://ssr.highygt.us.kg/ygt?sub?
     type: http
     interval: 86400
     health-check:
