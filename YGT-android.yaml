@@ -31,7 +31,7 @@ proxy-providers:
     filter: '^(?!.*(CFnat)).*$'
       
   牛逼:
-    url: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=e2079d4cc7a9ea7a325642b016cd057b
+    url: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=249039973424c85871e33dec1b18dd34
     type: http
     interval: 86400
     health-check:
