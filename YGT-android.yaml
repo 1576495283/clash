@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   花云:
-    url: https://api-huacloud.net/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_Trojan.yaml&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Ftoken2%3Dyxrj9v5y-b18a58c8022scni178yyz7
+    url: https://api-huacloud.net/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS.yaml&url=https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Ftoken2%3Dyxrj9v5y-b18a58c8022scni178yyz7%26sip002%3D1
     type: http
     interval: 86400
     health-check:
