@@ -15,7 +15,34 @@ proxy-providers:
       sort: true
       proxy: 直连
     filter: '^(?!.*(标准|高级|Traffic|Expire)).*$'
-  
+  cf:
+    url: https://ssr.highygt.us.kg/ygt?clash
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      udp: true
+      skip-cert-verify: true
+      emoji: true
+      sort: true
+      proxy: 🚀 默认代理
+    filter: '^(?!.*(CFnat)).*$'    
+  牛逼:
+    url: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=249039973424c85871e33dec1b18dd34
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      udp: true
+      skip-cert-verify: true
+      emoji: true
+      sort: true
+      proxy: 直连
+    filter: '^(?!.*(建议|IPv6)).*$'
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
