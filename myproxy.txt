@@ -1,6 +1,4 @@
 keeflys.com
-api.themoviedb.org
-image.tmdb.org
 themoviedb.org
 thetvdb.com
 fanart.tv
@@ -9,11 +7,9 @@ trakt.tv
 tvmaze.com
 omdbapi.com
 hongxingyunmovie.vip
-odd-poetry-38c8
 emotn.com
 emotn.shop
 hdhive.com
-api.themoviedb.org
 google.com
 googleapis.com
 gstatic.com
@@ -47,6 +43,9 @@ cloudflarestatus.com
 workers.dev
 pages.dev
 trycloudflare.com
+cloudflareclient.com
+argotunnel.com
+cloudflared.com
 telegram.org
 telegram.me
 t.me
@@ -86,6 +85,9 @@ steamcdn-a.akamaihd.net
 steamserver.net
 github.com
 githubusercontent.com
+raw.githubusercontent.com
+objects.githubusercontent.com
+avatars.githubusercontent.com
 githubassets.com
 github.io
 githubapp.com
@@ -123,3 +125,17 @@ dropbox.com
 dropboxusercontent.com
 mega.nz
 mega.io
+openai.com
+chatgpt.com
+oaistatic.com
+oaiusercontent.com
+auth.openai.com
+anthropic.com
+claude.ai
+perplexity.ai
+poe.com
+huggingface.co
+replicate.com
+midjourney.com
+stability.ai
+character.ai
