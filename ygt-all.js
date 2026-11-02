@@ -1,6 +1,5 @@
 const main = (config) => {
 
-
   // -------------------------
   // 1. Basic
   // -------------------------
@@ -26,7 +25,6 @@ const main = (config) => {
 
   // -------------------------
   // 3. DNS
-  // 保留原 JS 的 DNS 架构，并完整合并原 YAML Fake-IP Filter
   // -------------------------
   config["dns"] = {
     "enable": true,
@@ -43,20 +41,17 @@ const main = (config) => {
       "+.localhost",
       "+.home.arpa",
 
-      // 中国直连 / 私有域
       "geosite:cn",
       "rule-set:China / Domain",
       "rule-set:Direct / Domain",
       "rule-set:Private / Domain",
 
-      // Windows / 网络探测
       "+.msftconnecttest.com",
       "+.msftncsi.com",
       "resolver1.opendns.com",
       "detectportal.firefox.com",
       "network-test.debian.org",
 
-      // SideStore
       "ani.sidestore.io",
       "ani.sidestore.app",
       "ani.sidestore.zip",
@@ -64,7 +59,6 @@ const main = (config) => {
       "ani.npeg",
       "sidestore.io",
 
-      // 时间 / NTP
       "time.*.com",
       "time.*.gov",
       "time.*.edu.cn",
@@ -74,7 +68,6 @@ const main = (config) => {
       "time-ios.apple.com",
       "pool.ntp.org",
 
-      // Apple 更新
       "mesu.apple.com",
       "swscan.apple.com",
       "swquery.apple.com",
@@ -83,7 +76,6 @@ const main = (config) => {
       "swdist.apple.com",
       "+.push.apple.com",
 
-      // 音乐服务
       "music.163.com",
       "music.migu.cn",
       "y.qq.com",
@@ -95,11 +87,9 @@ const main = (config) => {
       "api.joox.com",
       "joox.com",
 
-      // 腾讯 / QQ
       "+.qq.com",
       "+.tencent.com",
 
-      // 游戏 / STUN
       "+.srv.nintendo.net",
       "+.cdn.nintendo.net",
       "+.battle.net",
@@ -113,19 +103,15 @@ const main = (config) => {
       "+.stun.playstation.net",
       "+.stun.*",
 
-      // Google 国内镜像
       "lens.l.google.com",
       "stun.l.google.com",
       "+.services.googleapis.cn",
       "+.googleapis.cn",
 
-      // Netflix
       "+.nflxvideo.net",
 
-      // 设备 / IoT
       "heartbeat.belkin.com",
 
-      // 银行 / 运营商
       "+.cmbchina.com",
       "+.cmbimg.com",
       "open.e.189.cn",
@@ -137,7 +123,6 @@ const main = (config) => {
       "enrichgw.10010.com",
       "+.pub.3gppnetwork.org",
 
-      // 私有 / 自用域
       "+.highygt.us.kg",
       "highygt.us.kg",
       "ygtnas092052.fun",
@@ -146,7 +131,6 @@ const main = (config) => {
       "highygt.win",
       "+.highygt.win",
 
-      // 其他明确域名
       "+.sandai.net",
       "+.uu.163.com",
       "ps.res.netease.com",
@@ -156,7 +140,6 @@ const main = (config) => {
       "ff.dorado.sdo.com",
       "shark007.net",
 
-      // 自定义域名
       "+.ynhtbank.com",
       "+.qeayr.cn",
       "+.saojc.xyz",
@@ -339,8 +322,7 @@ const main = (config) => {
     .map(p => String(p.name));
 
   // ================================================================
-  // 8. 原机场已有基础策略组
-  //    保留原 JS 对自动选择 / 故障转移 / 全节点组的处理能力
+  // 8. 原机场已有策略组
   // ================================================================
   const originalGroups = Array.isArray(config["proxy-groups"])
     ? config["proxy-groups"]
@@ -573,10 +555,8 @@ const main = (config) => {
   function detectRegion(proxyName) {
     const text = String(proxyName || "");
 
-    // CF 优先：用户明确用 CF 标记 Cloudflare 节点
     if (isCF(text)) return "CF";
 
-    // 印度单独处理
     if (regionPatterns["印度"].some(p => p.test(text))) {
       return "印度";
     }
@@ -618,7 +598,6 @@ const main = (config) => {
 
   // ================================================================
   // 11. 地区组
-  // 每个地区：手动 + 自动 + 故障转移
   // ================================================================
   const regionGroups = [];
 
@@ -669,13 +648,17 @@ const main = (config) => {
   const allManual = addIcon({
     "name": "所有-手动",
     "type": "select",
-    "proxies": proxyNames.slice()
+    "proxies": proxyNames.length > 0
+      ? proxyNames.slice()
+      : ["DIRECT"]
   }, "其他地区");
 
   const allAuto = addIcon({
     "name": "所有-自动",
     "type": "url-test",
-    "proxies": proxyNames.slice(),
+    "proxies": proxyNames.length > 0
+      ? proxyNames.slice()
+      : ["DIRECT"],
     "url": "https://www.gstatic.com/generate_204",
     "interval": 300,
     "timeout": 5000,
@@ -689,10 +672,10 @@ const main = (config) => {
   // 13. 业务组
   // ================================================================
   const defaultTargets = [
-    "直连",
+    "DIRECT",
     "所有-手动",
     "所有-自动"
-  ].concat(availableRegionFallbacks).concat(["拒绝"]);
+  ].concat(availableRegionFallbacks).concat(["REJECT"]);
 
   function businessGroup(name) {
     return addIcon({
@@ -743,13 +726,12 @@ const main = (config) => {
 
   const businessGroups = businessNames.map(businessGroup);
 
-  // 一键代理
   const oneClick = addIcon({
     "name": "一键代理",
     "type": "select",
     "proxies": ["所有-手动", "所有-自动"]
       .concat(availableRegionFallbacks)
-      .concat(["直连", "拒绝"])
+      .concat(["DIRECT", "REJECT"])
   }, "一键代理");
 
   // ================================================================
@@ -764,10 +746,7 @@ const main = (config) => {
 
   // ================================================================
   // 15. Rule Providers
-  // 直接迁移原 YAML 的完整规则集
   // ================================================================
-  const ruleBase = "https://gh-proxy.com/";
-
   function provider(url, behavior, format) {
     return {
       "type": "http",
@@ -1000,7 +979,6 @@ const main = (config) => {
 
   // ================================================================
   // 16. Rules
-  // 规则顺序沿用原 YAML：自定义域 / 内网 → 业务 → 国内外 → MATCH
   // ================================================================
   config["rules"] = [
     // 自定义 / 本地
@@ -1023,11 +1001,11 @@ const main = (config) => {
     "DOMAIN-SUFFIX,gov.cn,DIRECT",
 
     // 特殊站点
-    "DOMAIN-KEYWORD,bilibili,香港-故转",
-    "DOMAIN-KEYWORD,hdhive,香港-故转",
-    "DOMAIN-SUFFIX,hongxingyunmovie.vip,新加坡-故转",
-    "DOMAIN-SUFFIX,keeflys.com,新加坡-故转",
-    "DOMAIN-SUFFIX,dangsfly.com,新加坡-故转",
+    "DOMAIN-KEYWORD,bilibili,所有-手动",
+    "DOMAIN-KEYWORD,hdhive,所有-手动",
+    "DOMAIN-SUFFIX,hongxingyunmovie.vip,所有-手动",
+    "DOMAIN-SUFFIX,keeflys.com,所有-手动",
+    "DOMAIN-SUFFIX,dangsfly.com,所有-手动",
     "DOMAIN-SUFFIX,imacosx.cn,DIRECT",
     "DOMAIN,imacosx.cn,DIRECT",
     "DOMAIN,www.imacosx.cn,DIRECT",
@@ -1094,8 +1072,8 @@ const main = (config) => {
     "RULE-SET,Nvidia / Domain,Nvidia",
 
     // 自用服务
-    "RULE-SET,Emby,新加坡-故转",
-    "RULE-SET,Emotnstore,新加坡-故转",
+    "RULE-SET,Emby,所有-手动",
+    "RULE-SET,Emotnstore,所有-手动",
 
     // 通用国外 / 国内
     "RULE-SET,Proxy / Domain,国外",
