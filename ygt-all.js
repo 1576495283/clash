@@ -446,65 +446,90 @@ const main = (config) => {
   // 9. 图标
   // ================================================================
   const iconBaseURL =
-    "https://cdn.jsdelivr.net/gh/n0de-sudo/Perfect-Rules@main/Clash/icons/";
+    "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/";
 
   const groupIcons = {
+    // 代理模式 / 功能组
     "一键代理": "Proxy.png",
+    "手动": "Static.png",
+    "自动": "Auto.png",
+    "实验": "Lab.png",
+    "穿透": "Bypass.png",
     "国内": "China.png",
-    "国外": "Other.png",
-    "其他": "Other.png",
-    "ChatGPT": "AI.png",
-    "Gemini": "AI.png",
-    "Copilot": "Microsoft.png",
-    "Perplexity": "AI.png",
-    "Claude": "AI.png",
-    "Meta AI": "AI.png",
-    "Grok": "AI.png",
-    "Groq": "AI.png",
+    "国外": "Global.png",
+    "其他": "Global.png",
+    "其他地区": "Global.png",
+
+    // AI 服务
+    "ChatGPT": "ChatGPT.png",
+    "Copilot": "Copilot.png",
+    "Perplexity": "Spark.png",
+    "Claude": "Bot.png",
+    "Meta AI": "Facebook.png",
+    "Grok": "X.png",
+    "Groq": "Lambda.png",
+    "Gemini": "Google.png",
+
+    // 开发与通讯
     "GitHub": "GitHub.png",
-    "Reddit": "Other.png",
     "Telegram": "Telegram.png",
-    "instagram": "Other.png",
-    "Facebook": "Other.png",
-    "BiliBili": "Other.png",
+    "WhatsApp": "Line.png",
+    "Reddit": "Media.png",
+
+    // 社交与流媒体
+    "instagram": "Instagram.png",
+    "Instagram": "Instagram.png",
+    "Facebook": "Facebook.png",
+    "BiliBili": "bilibili.png",
     "YouTube": "YouTube.png",
     "TikTok": "TikTok.png",
     "Netflix": "Netflix.png",
-    "HBO": "Other.png",
-    "WhatsApp": "Other.png",
-    "Disney": "Other.png",
-    "Amazon": "Other.png",
-    "Crunchyroll": "Other.png",
-    "Popcorn": "Other.png",
+    "HBO": "HBO.png",
+    "Disney": "Disney+.png",
+    "Amazon": "Amazon.png",
+    "Crunchyroll": "Streaming.png",
+    "Popcorn": "ForeignMedia.png",
     "Spotify": "Spotify.png",
-    "Nvidia": "Other.png",
-    "Steam": "Steam.png",
-    "Games": "Steam.png",
-    "Crypto": "Other.png",
+
+    // 平台与服务
+    "Nvidia": "Server.png",
+    "NVIDIA": "Server.png",
+    "Crypto": "Cryptocurrency.png",
+    "Block": "Reject.png",
     "Apple": "Apple.png",
     "Google": "Google.png",
     "Microsoft": "Microsoft.png",
-    "Test": "Network-test.png",
-    "Block": "Other.png",
+    "CF": "Cloudflare.png",
+    "Cloudflare": "Cloudflare.png",
+
+    // 游戏与测试
+    "Steam": "Steam.png",
+    "Games": "Game.png",
+    "Test": "Speedtest.png",
+
+    // 地区
     "香港": "Hong_Kong.png",
     "台湾": "Taiwan.png",
     "日本": "Japan.png",
     "新加坡": "Singapore.png",
     "韩国": "Korea.png",
     "美国": "United_States.png",
-    "英国": "Other.png",
-    "印度": "Other.png",
-    "CF": "Other.png",
-    "其他地区": "Other.png"
+    "英国": "United_Kingdom.png",
+    "印度": "India.png",
+
+    // 兜底
+    "默认": "Global.png"
   };
 
   function addIcon(group, name) {
     if (groupIcons[name]) {
       group.icon = iconBaseURL + groupIcons[name];
+    } else {
+      // 未匹配到具体名称时使用兜底图标
+      group.icon = iconBaseURL + "Global.png";
     }
     return group;
   }
-
   // ================================================================
   // 10. 节点地区识别
   // ================================================================
