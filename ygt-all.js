@@ -530,6 +530,7 @@ const main = (config) => {
     }
     return group;
   }
+
   // ================================================================
   // 10. 节点地区识别
   // ================================================================
@@ -1033,7 +1034,7 @@ const main = (config) => {
     "DOMAIN-SUFFIX,dangsfly.com,所有-手动",
     "DOMAIN-SUFFIX,imacosx.cn,DIRECT",
     "DOMAIN,imacosx.cn,DIRECT",
-    "DOMAIN,www.imacosx.cn,DIRECT",
+    "DOMAIN,[www.imacosx.cn](https://www.imacosx.cn),DIRECT",
 
     // 测试 / 屏蔽
     "RULE-SET,TEST / Domain,Test",
