@@ -1,4 +1,4 @@
-const main = (config) => {
+jiust main = (config) => {
 
   // -------------------------
   // 1. Basic
@@ -539,6 +539,9 @@ const main = (config) => {
       /香港/i, /\bHK\b/i, /HKG/i, /Hong\s*Kong/i, /HongKong/i,
       /广港/i
     ],
+    "搬瓦工": [
+      /JMS/i
+    ],
     "台湾": [
       /台湾/i, /台灣/i, /\bTW\b/i, /TPE/i, /KHH/i, /TSA/i,
       /Taiwan/i, /TaiWan/i, /广台/i
@@ -588,7 +591,7 @@ const main = (config) => {
     }
 
     for (const region of [
-      "香港", "台湾", "日本", "新加坡", "韩国", "美国", "英国"
+      "香港", "搬瓦工", "台湾", "日本", "新加坡", "韩国", "美国", "英国"
     ]) {
       if (regionPatterns[region].some(p => p.test(text))) {
         return region;
@@ -600,6 +603,7 @@ const main = (config) => {
 
   const regionNodes = {
     "香港": [],
+    "搬瓦工": [],
     "台湾": [],
     "日本": [],
     "新加坡": [],
@@ -618,7 +622,7 @@ const main = (config) => {
   });
 
   const regionOrder = [
-    "香港", "台湾", "日本", "新加坡", "韩国",
+    "香港", "搬瓦工", "台湾", "日本", "新加坡", "韩国",
     "美国", "英国", "印度", "CF", "其他地区"
   ];
 
