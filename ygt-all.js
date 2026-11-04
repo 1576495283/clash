@@ -550,7 +550,7 @@ const main = (config) => {
     "日本": [
       /日本/i, /\bJP\b/i, /NRT/i, /HND/i, /KIX/i, /CTS/i, /FUK/i,
       /Japan/i, /Tokyo/i, /Osaka/i, /广日/i, /川日/i, /泉日/i,
-      /埼玉/i, /沪日/i, /深日/i
+      /埼玉/i, /沪日/i, /深日/i, /c86s4/i
     ],
     "新加坡": [
       /新加坡/i, /\bSG\b/i, /SIN/i, /XSP/i, /Singapore/i,
@@ -565,11 +565,11 @@ const main = (config) => {
       /SJC/i, /United\s*States/i, /America/i, /Los\s*Angeles/i,
       /New\s*York/i, /广美/i, /纽约/i, /波特兰/i, /达拉斯/i,
       /俄勒/i, /凤凰城/i, /费利蒙/i, /洛杉/i, /圣何塞/i,
-      /圣克拉/i, /西雅/i, /芝加/i
+      /圣克拉/i, /西雅/i, /芝加/i, /c86s1/i, /c86s2/i, /c86s3/i, /c86s801/i
     ],
     "英国": [
       /英国/i, /\bUK\b/i, /United\s*Kingdom/i, /England/i,
-      /London/i, /Manchester/i, /伦敦/i, /英/i
+      /London/i, /Manchester/i, /伦敦/i, /英/i, /c86s5/i
     ],
     "印度": [
       /India/i, /\bIN\b/i, /Mumbai/i, /Delhi/i,
