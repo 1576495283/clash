@@ -1,4 +1,4 @@
-jiust main = (config) => {
+const main = (config) => {
 
   // -------------------------
   // 1. Basic
@@ -404,7 +404,7 @@ jiust main = (config) => {
     "Netflix", "HBO", "WhatsApp", "Disney", "Amazon", "Crunchyroll",
     "Popcorn", "Spotify", "Nvidia", "Steam", "Games", "Crypto",
     "Apple", "Google", "Microsoft", "Test", "Block",
-    "香港", "台湾", "日本", "新加坡", "韩国", "美国", "英国",
+    "香港", "搬瓦工", "台湾", "日本", "新加坡", "韩国", "美国", "英国",
     "印度", "CF", "其他地区"
   ]);
 
@@ -509,6 +509,7 @@ jiust main = (config) => {
 
     // 地区
     "香港": "Hong_Kong.png",
+    "搬瓦工": "Global.png",
     "台湾": "Taiwan.png",
     "日本": "Japan.png",
     "新加坡": "Singapore.png",
