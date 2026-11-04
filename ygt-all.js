@@ -582,24 +582,28 @@ const main = (config) => {
     return /CF|CF随机|CFnat/i.test(String(name || ""));
   }
 
-  function detectRegion(proxyName) {
+  function detectRegions(proxyName) {
     const text = String(proxyName || "");
+    const regions = [];
 
-    if (isCF(text)) return "CF";
-
-    if (regionPatterns["印度"].some(p => p.test(text))) {
-      return "印度";
+    if (isCF(text)) {
+      regions.push("CF");
     }
 
     for (const region of [
-      "香港", "搬瓦工", "台湾", "日本", "新加坡", "韩国", "美国", "英国"
+      "香港", "搬瓦工", "台湾", "日本", "新加坡", "韩国",
+      "美国", "英国", "印度"
     ]) {
       if (regionPatterns[region].some(p => p.test(text))) {
-        return region;
+        regions.push(region);
       }
     }
 
-    return "其他地区";
+    if (regions.length === 0) {
+      regions.push("其他地区");
+    }
+
+    return regions;
   }
 
   const regionNodes = {
@@ -618,8 +622,13 @@ const main = (config) => {
 
   originalProxies.forEach(proxy => {
     if (!proxy || !proxy.name) return;
-    const region = detectRegion(proxy.name);
-    regionNodes[region].push(proxy.name);
+
+    const regions = detectRegions(proxy.name);
+
+    regions.forEach(region => {
+      if (!regionNodes[region]) return;
+      regionNodes[region].push(proxy.name);
+    });
   });
 
   const regionOrder = [
@@ -1039,7 +1048,6 @@ const main = (config) => {
     "DOMAIN-SUFFIX,dangsfly.com,所有-手动",
     "DOMAIN-SUFFIX,imacosx.cn,DIRECT",
     "DOMAIN,imacosx.cn,DIRECT",
-    "DOMAIN,[www.imacosx.cn](https://www.imacosx.cn),DIRECT",
 
     // 测试 / 屏蔽
     "RULE-SET,TEST / Domain,Test",
