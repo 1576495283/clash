@@ -1034,14 +1034,13 @@ const main = (config) => {
     // 内网
     "IP-CIDR,192.168.2.0/24,DIRECT,no-resolve",
     "IP-CIDR,172.16.0.0/12,DIRECT,no-resolve",
-    "IP-CIDR,198.41.0.0/12,DIRECT,no-resolve",
     "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
     "IP-CIDR,172.28.0.0/16,DIRECT,no-resolve",
     "IP-CIDR,125.76.184.114/32,DIRECT,no-resolve",
     "DOMAIN-SUFFIX,gov.cn,DIRECT",
 
     // 特殊站点
-    "DOMAIN-KEYWORD,bilibili,所有-手动",
+    "DOMAIN-KEYWORD,bilibili,香港-自动",
     "DOMAIN-KEYWORD,hdhive,所有-手动",
     "DOMAIN-SUFFIX,hongxingyunmovie.vip,所有-手动",
     "DOMAIN-SUFFIX,keeflys.com,所有-手动",
