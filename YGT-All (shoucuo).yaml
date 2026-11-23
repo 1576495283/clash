@@ -5,10 +5,11 @@
 # 机场节点订阅
 
 proxy-providers:
-  花云:
-    url: https://api.xmancdn.net/osubscribe.php?token2=yxrj9v5y-e4bd70a336z6s3e25f
+    
+  QQG:
+    url: https://89.42.95.173:2096/kmda0ot5mkvwqc8j/dhyx8iivimvots1s
     type: http
-    interval: 86400000
+    interval: 86400
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -17,11 +18,10 @@ proxy-providers:
       skip-cert-verify: true
       emoji: true
       sort: true
-      proxy: 直连   
-    filter: '^(?!.*(香港标准|香港高级|Traffic|Expire)).*$'
-    
-  搬瓦工:
-    url: https://jmssub.net/members/getsub.php?service=1493159&id=48b80d1c-80e3-495e-b913-3993a9c07460&format=clash
+      proxy: 直连
+      
+  rake:
+    url: https://198.44.98.144:2096/wqos7dgfd5fz8n33/9xtqf2vcnliqqamj
     type: http
     interval: 86400
     health-check:
@@ -377,8 +377,6 @@ default: &default
     - 搬瓦工-手动
     - 搬瓦工-自动
     - 香港-故转
-    - 实验-手动
-    - 实验-故转
     - 台湾-故转
     - 日本-故转
     - 新加坡-故转
@@ -387,6 +385,7 @@ default: &default
     - 英国-故转
     - 印度-故转
     - CF-故转
+    - CF-手动
     - 其他-故转
     - 拒绝
 
@@ -458,7 +457,7 @@ proxy-groups:
   - name: 搬瓦工-手动
     type: select
     include-all: true
-    filter: "(?=.*(JMS)).*$"
+    filter: "(?=.*(JMS|实验性|x0.8|免费)).*$"
     
   - name: 搬瓦工-自动
     type: url-test
@@ -734,6 +733,8 @@ rules:
   - SRC-IP-CIDR,172.18.20.10/32,直连
   # 2. 内网互访直连
   - IP-CIDR,192.168.2.0/24,直连
+  - IP-CIDR,198.44.98.144/32,直连,no-resolve
+  - IP-CIDR,89.42.95.173/32,直连,no-resolve
   - IP-CIDR,172.16.0.0/12,直连
   - IP-CIDR,198.41.0.0/12,直连
   - IP-CIDR,10.0.0.0/8,直连
