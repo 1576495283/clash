@@ -1022,7 +1022,7 @@ const main = (config) => {
   // ================================================================
   config["rules"] = [
     // 自定义 / 本地
-    "DOMAIN-SUFFIX,highygt.win,DIRECT",
+    "DOMAIN-SUFFIX,highygt.win,一键代理",
     "DOMAIN-SUFFIX,ygtnas092052.fun,DIRECT",
     "DOMAIN-KEYWORD,newtv,DIRECT",
     "DOMAIN-KEYWORD,qq,DIRECT",
@@ -1033,6 +1033,8 @@ const main = (config) => {
 
     // 内网
     "IP-CIDR,192.168.2.0/24,DIRECT,no-resolve",
+    "IP-CIDR,198.44.98.144/32,DIRECT,no-resolve",
+    "IP-CIDR,89.42.95.173/32,DIRECT,no-resolve",
     "IP-CIDR,172.16.0.0/12,DIRECT,no-resolve",
     "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
     "IP-CIDR,172.28.0.0/16,DIRECT,no-resolve",
@@ -1040,11 +1042,11 @@ const main = (config) => {
     "DOMAIN-SUFFIX,gov.cn,DIRECT",
 
     // 特殊站点
-    "DOMAIN-KEYWORD,bilibili,香港-自动",
-    "DOMAIN-KEYWORD,hdhive,所有-手动",
-    "DOMAIN-SUFFIX,hongxingyunmovie.vip,所有-手动",
-    "DOMAIN-SUFFIX,keeflys.com,所有-手动",
-    "DOMAIN-SUFFIX,dangsfly.com,所有-手动",
+    "DOMAIN-KEYWORD,bilibili,一键代理",
+    "DOMAIN-KEYWORD,hdhive,一键代理",
+    "DOMAIN-SUFFIX,hongxingyunmovie.vip,一键代理",
+    "DOMAIN-SUFFIX,keeflys.com,一键代理",
+    "DOMAIN-SUFFIX,dangsfly.com,一键代理",
     "DOMAIN-SUFFIX,imacosx.cn,DIRECT",
     "DOMAIN,imacosx.cn,DIRECT",
 
