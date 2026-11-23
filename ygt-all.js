@@ -541,7 +541,7 @@ const main = (config) => {
       /广港/i
     ],
     "搬瓦工": [
-      /JMS/i
+      /JMS/i, /实验/i, /免费/i
     ],
     "台湾": [
       /台湾/i, /台灣/i, /\bTW\b/i, /TPE/i, /KHH/i, /TSA/i,
