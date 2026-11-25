@@ -165,6 +165,11 @@ const main = (config) => {
     ],
 
     "nameserver-policy": {
+      "+.mega.nz": ["https://1.1.1.1/dns-query", "https://1.0.0.1/dns-query"],
+      "+.mega.io": ["https://1.1.1.1/dns-query", "https://1.0.0.1/dns-query"],
+      "+.mega.co.nz": ["https://1.1.1.1/dns-query", "https://1.0.0.1/dns-query"],
+      "+.mega.app": ["https://1.1.1.1/dns-query", "https://1.0.0.1/dns-query"],
+      
       "geosite:cn": [
         "https://dns.alidns.com/dns-query",
         "https://doh.pub/dns-query"
@@ -207,6 +212,10 @@ const main = (config) => {
         "+.openai.com",
         "+.chatgpt.com",
         "+.anthropic.com",
+        "+.mega.nz",
+        "+.mega.io",
+        "+.mega.co.nz",
+        "+.mega.app",
         "+.claude.ai"
       ]
     }
