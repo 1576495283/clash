@@ -786,7 +786,16 @@ const main = (config) => {
   // ================================================================
   // 14. 最终 proxy-groups
   // ================================================================
-  config["proxy-groups"] = []
+  const globalGroup = {
+    "name": "GLOBAL",
+    "type": "select",
+    "proxies": ["一键代理", "所有-手动", "所有-自动"]
+      .concat(availableRegionFallbacks)
+      .concat(["DIRECT"]),
+    "icon": iconBaseURL + "Global.png"
+  };
+
+  config["proxy-groups"] = [globalGroup]
     .concat(preservedGroups)
     .concat([allManual, allAuto])
     .concat(businessGroups)
